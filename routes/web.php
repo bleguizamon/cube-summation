@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('cases');
 });
+
+Route::post('blade','CubeOperationController@operations');
+Route::post('cases','CubeOperationController@testCases');
