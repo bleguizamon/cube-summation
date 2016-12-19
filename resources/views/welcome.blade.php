@@ -12,13 +12,14 @@
 
         <!-- Styles -->
         <style>
-            html, body {
+            header {
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
-                height: 100vh;
-                margin: 0;
+                height: 20vh;
+                margin: 0;;
+                column-span: 10
             }
 
             .full-height {
@@ -42,7 +43,7 @@
             }
 
             .content {
-                text-align: center;
+                text-align: center !important;
             }
 
             .title {
@@ -62,30 +63,36 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 60%;
+                align-content: center;
+            }
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: justify;
+                padding: 8px;
+            }
+
+
         </style>
     </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+    <body style="text-align:center">
+      <header>
+        <div class="title  content">
+            Cube Summation
         </div>
+      </header>
+
+
+      <div class="flex-center" style="height:400px;">
+      @yield("content")
+      </div>
+
+
+      <footer class="content">build by bleguizamon</footer>
+
     </body>
 </html>
